@@ -8,7 +8,7 @@ app.use(express.json());
 
 
 connectDB();
-
+app.get("/", (req, res) => res.json({message:"API running"}));
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/museums", require("./routes/museumRoutes"));
 app.use("/api/images", require("./routes/imageRoutes"));
